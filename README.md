@@ -13,7 +13,7 @@ For the Dell Integration to work we need to indentify the Vendor code in FreshSe
 
 1. In FreshService go to Admin > Vendors
 2. Click on Dell
-3. The last 10 digits of the URL will be the vendor id - https://yourdomain.freshservice.com/itil/vendors/**1234567890**
+3. The last 10 digits of the URL will be the vendor id - https://yourdomain.freshservice.com/itil/vendors/1234567890
 4. Add those digits to configs/freshservice.js like this:
 
 ```
