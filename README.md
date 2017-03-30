@@ -9,7 +9,7 @@ FRESHSERVICE_URL='yourDomainHere.FRESHSERVICE.COM'
 ```
 
 #### Dell Warranty Check via the Dell API
-For the Dell Integration to work we need to indentify the Vendor code in FreshService associated with Dell.  Unfortunealty that means this only works with computers purchased directly from Dell.
+For the Dell Integration to work we need to indentify the Vendor code in FreshService associated with Dell.  Unfortunately that means this only works with computers purchased directly from Dell.
 
 1. In FreshService go to Admin > Vendors
 2. Click on Dell
