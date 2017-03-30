@@ -1,14 +1,14 @@
 {
-  "name": "BIOLER PLATE",
+  "name": "FreshServiceAPI",
   "version": "0.0.1",
-  "description": "UPDATE ME",
+  "description": "Project to integrate third party apps with FreshService",
   "main": "app.js",
   "scripts": {
     "test": "npm run test-unit",
     "test-unit": "mocha tests/unit/**.test.js --reporter spec",
     "test-integration": "mocha tests/integration/*.test.js  --reporter spec"
   },
-  "author": "",
+  "author": "Jeff Randall",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^4.0.0",
