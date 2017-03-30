@@ -1,0 +1,26 @@
+{
+  "name": "BIOLER PLATE",
+  "version": "0.0.1",
+  "description": "UPDATE ME",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm run test-unit",
+    "test-unit": "mocha tests/unit/**.test.js --reporter spec",
+    "test-integration": "mocha tests/integration/*.test.js  --reporter spec"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "bluebird": "^3.5.0",
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-mocha": "^3.0.1",
+    "gulp-nsp": "^2.4.2",
+    "gulp-util": "^3.0.7",
+    "mocha": "^3.1.2"
+  }
+}
