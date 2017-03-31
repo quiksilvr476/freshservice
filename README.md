@@ -29,3 +29,8 @@ module.exports = {
 ```
 
 I also added a Custom Boolean Field to the Computer Asset Type called Dell Warranty Checked.  When we have successfully returned the expiration date from the Dell API (or you set the expiration date manually and then check this box) this service will no longer call the Dell API for Assets that are marked true.
+
+##### Get your Dell API Key
+1. [Dell TechDirect](http://techdirect.dell.com)
+2. Create an account
+3. Register for an API Key
