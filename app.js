@@ -1,27 +1,19 @@
 const FSconfig = require('./configs/freshservice')
-const allAssets = require('./controllers/assets/getAllAssets.js');
-
-// Check if there is an existing warranty expiration
-function getWarrantyExpiration(asset) {
-	return asset.levelfield_values.warranty_expiry_date_4000679286 === null
-}
+const Assets = require('./controllers/assets/getAllAssets.js');
 
 // Check if Dell is the Vendor
-function isDell(needsWarrantyAssets) {
-	return needsWarrantyAssets.levelfield_values.vendor_4000679286 === FSconfig.freshservice.dell_vendor_id
+function isDell(asset) {
+	return asset.levelfield_values.vendor_4000679286 == FSconfig.freshservice.dell_vendor_id
 }
 
 // Get all the Assets in FreshService
-allAssets.getAssets()
+Assets.getAssets()
 .then(assets => {
-	console.log(`getting assets from app.js ${assets}`)
-	return assets.filter(getWarrantyExpiration)  		// Filter out all Assets with an Expiration Date
+	console.log(`total number of assets is ${assets.length}`)
+	return assets.filter(isDell)												// Filter out any non Dell equipment
 })
-.then(needsWarrantyAssets => {
-	console.log('filtering, should be slow')
-	return needsWarrantyAssets.filter(isDell)				// Filter out any non Dell equipment
-})
-.then(dellAssets => {
-	console.log(dellAssets)
+.then(DellAssets => {
+	console.log(`number of Dell devices is ${DellAssets.length}`)
+	DellAssets.forEach(asset => console.log(asset.levelfield_values.dell_warranty_checked_4000679292))
 })
 .catch(err => console.error(err))
